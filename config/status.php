@@ -10,5 +10,9 @@ return [
         'admin_normal' => 1,    //正常
         'admin_pedding' => 0,   //待审核
         'admin_delete' => 99,   //删除
+        
+        'user_normal' => 1,    //正常
+        'user_pedding' => 0,   //待审核
+        'user_delete' => 99,   //删除
     ],
 ];

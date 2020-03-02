@@ -12,6 +12,7 @@ use think\Validate;
  */
 abstract class BaseController
 {
+    
     /**
      * Request实例
      * @var \think\Request
@@ -45,14 +46,18 @@ abstract class BaseController
     {
         $this->app     = $app;
         $this->request = $this->app->request;
-
+        
         // 控制器初始化
         $this->initialize();
     }
 
     // 初始化
     protected function initialize()
-    {}
+    {
+        header('Access-Control-Allow-Origin: *');
+        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+        header('Access-Control-Allow-Methods: GET,POST');
+    }
 
     /**
      * 验证数据

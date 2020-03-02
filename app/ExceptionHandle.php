@@ -1,4 +1,11 @@
 <?php
+/*
+ * @Descripttion: 
+ * @Author: House
+ * @Date: 2019-12-19 17:08:09
+ * @LastEditors: House
+ * @LastEditTime: 2020-03-01 21:06:41
+ */
 namespace app;
 
 use think\db\exception\DataNotFoundException;
@@ -51,7 +58,7 @@ class ExceptionHandle extends Handle
     public function render($request, Throwable $e): Response
     {
         // 添加自定义异常处理机制
-        // return show(config('status.success'),$e->getMessage(),[],500);
+        return show(config('status.success'),$e->getMessage(),[],500);
         // 其他错误交给系统处理
         return parent::render($request, $e);
     }
